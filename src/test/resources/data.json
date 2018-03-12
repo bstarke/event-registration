@@ -1,0 +1,47 @@
+[
+  {
+    "_class" : "net.starkenberg.event.model.Event",
+    "eventDate" : "2018-04-11",
+    "active" : true,
+    "registrationOpen" : true
+  },
+  {
+    "_class": "net.starkenberg.event.model.Guardian",
+    "firstName": "Fred",
+    "lastName": "Flintstone",
+    "zipCode": "12345",
+    "email": "fred@flintstone.net",
+    "children": [
+      {
+        "_class": "net.starkenberg.event.model.Child",
+        "name": "pebbles",
+        "birthDate": "2015-01-01"
+      }
+    ]
+  },
+  {
+    "_class": "net.starkenberg.event.model.Guardian",
+    "firstName": "barney",
+    "lastName": "rubble",
+    "zipCode": "12345",
+    "email": "barney@rubble.org",
+    "children": [
+      {
+        "_class": "net.starkenberg.event.model.Child",
+        "name": "bam",
+        "birthDate": "2015-11-11",
+        "specialNeeds" : true
+      },
+      {
+        "_class": "net.starkenberg.event.model.Child",
+        "name": "bambam",
+        "birthDate": "2016-02-02"
+      },
+      {
+        "_class": "net.starkenberg.event.model.Child",
+        "name": "bambambam",
+        "birthDate": "2017-03-03"
+      }
+    ]
+  }
+]
