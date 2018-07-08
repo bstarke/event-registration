@@ -19,7 +19,7 @@ public class Event implements Serializable{
 	
 	private static final long serialVersionUID = -4214356824391413153L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(unique=true, nullable=false)
 	private LocalDate eventDate;

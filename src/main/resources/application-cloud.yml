@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    username: ${vcap.services.events-db.credentials.username}
+    password: ${vcap.services.events-db.credentials.password}
+    url: ${vcap.services.events-db.credentials.url}

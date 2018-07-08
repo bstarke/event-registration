@@ -1,9 +1,17 @@
-info:
-  build:
-    artifact: "@project.artifactId@"
-    name: "@project.name@"
-    description: "@project.description@"
-    version: "@project.version@"
 spring:
   application:
     name: event-registration
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MariaDB53Dialect
+  datasource:
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

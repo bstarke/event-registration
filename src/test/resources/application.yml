@@ -1,3 +1,7 @@
 spring:
   profiles:
     active: test
+#  datasource:
+#    url: jdbc:mysql://192.168.8.38:3306/cf_38927c7e_9cb7_492f_9698_5b09a97b350f
+#    password: VZYfbpFDg70lj4rF
+#    username: 6Xy7PJYHZ3OWqASw

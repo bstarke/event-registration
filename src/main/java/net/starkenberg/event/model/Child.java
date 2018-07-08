@@ -18,7 +18,7 @@ public class Child implements Serializable{
 
 	private static final long serialVersionUID = -4214356824391413153L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Guardian guardian;

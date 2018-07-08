@@ -1,0 +1,17 @@
+---
+applications:
+- name: events
+  memory: 1G
+  disk_quota: 256M
+  path: target/event-registration.jar
+  buildpack: java_buildpack_offline
+#  services:
+#  - event-db
+#  ENV:
+#    GRANT_TYPE: client_credentials
+#    SSO_RESOURCES: |
+#       events-resource.execute: all actions
+#    SSO_AUTHORITIES: myapplication-resource.execute
+#    SSO_ACCESS_TOKEN_LIFETIME: 86400
+#    OAUTH2_RESOURCE_ID: events-resource
+#    SSO_SERVICE_URL: https://restful-clients.login.sys.myfoundation.mycompany.com
