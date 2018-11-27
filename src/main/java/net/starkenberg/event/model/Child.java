@@ -14,121 +14,116 @@ import java.time.temporal.ChronoUnit;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class Child implements Serializable{
+public class Child implements Serializable {
 
-	private static final long serialVersionUID = -4214356824391413153L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	@ManyToOne(cascade = CascadeType.ALL)
-	private Guardian guardian;
-	@NotNull
-	private String name;
-	@NotNull
-	private LocalDate birthDate;
-	private Boolean specialNeeds = false;
-	@CreatedDate
-	private LocalDateTime createDate;
-	@LastModifiedDate
-	private LocalDateTime lastModifiedDate;
+    private static final long serialVersionUID = -4214356824391413153L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Guardian guardian;
+    @NotNull
+    private String name;
+    @NotNull
+    private LocalDate birthDate;
+    private Boolean specialNeeds = false;
+    @CreatedDate
+    private LocalDateTime createDate;
+    @LastModifiedDate
+    private LocalDateTime lastModifiedDate;
 
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
-	}
+    /**
+     * @return the id
+     */
+    public Long getId() {
+        return id;
+    }
 
-	/**
-	 * @param id
-	 *            the id to set
-	 */
-	public void setId(long id) {
-		this.id = id;
-	}
+    /**
+     * @param id the id to set
+     */
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
 
-	/**
-	 * @param name
-	 *            the name to set
-	 */
-	public void setName(String name) {
-		if(name != null && !name.isEmpty()) {
-			this.name = StringUtils.trimWhitespace(name).toLowerCase();
-		} else {
-			this.name = name;
-		}
-	}
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        if (name != null && !name.isEmpty()) {
+            this.name = StringUtils.trimWhitespace(name).toLowerCase();
+        } else {
+            this.name = name;
+        }
+    }
 
-	/**
-	 * @return the guardian
-	 */
-	public Guardian getGuardian() {
-		return guardian;
-	}
+    /**
+     * @return the guardian
+     */
+    public Guardian getGuardian() {
+        return guardian;
+    }
 
-	/**
-	 * @param guardian
-	 *            the guardian to set
-	 */
-	public void setGuardian(Guardian guardian) {
-		this.guardian = guardian;
-	}
+    /**
+     * @param guardian the guardian to set
+     */
+    public void setGuardian(Guardian guardian) {
+        this.guardian = guardian;
+    }
 
-	/**
-	 * @return the birthDate
-	 */
-	public LocalDate getBirthDate() {
-		return birthDate;
-	}
+    /**
+     * @return the birthDate
+     */
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
 
-	/**
-	 * @param birthDate
-	 *            the birthDate to set
-	 */
-	public void setBirthDate(LocalDate birthDate) {
-		this.birthDate = birthDate;
-	}
+    /**
+     * @param birthDate the birthDate to set
+     */
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
 
-	/**
-	 * @return the specialNeeds
-	 */
-	public Boolean getSpecialNeeds() {
-		return specialNeeds;
-	}
+    /**
+     * @return the specialNeeds
+     */
+    public Boolean getSpecialNeeds() {
+        return specialNeeds;
+    }
 
-	/**
-	 * @param specialNeeds
-	 *            the specialNeeds to set
-	 */
-	public void setSpecialNeeds(Boolean specialNeeds) {
-		this.specialNeeds = specialNeeds;
-	}
-	
-	public Integer getAge() {
-		LocalDate today = LocalDate.now();
-		return ((int) ChronoUnit.YEARS.between(birthDate, today));
-	}
+    /**
+     * @param specialNeeds the specialNeeds to set
+     */
+    public void setSpecialNeeds(Boolean specialNeeds) {
+        this.specialNeeds = specialNeeds;
+    }
 
-	public LocalDateTime getCreateDate() {
-		return createDate;
-	}
+    public Integer getAge() {
+        LocalDate today = LocalDate.now();
+        return ((int) ChronoUnit.YEARS.between(birthDate, today));
+    }
 
-	public LocalDateTime getLastModifiedDate() {
-		return lastModifiedDate;
-	}
+    public LocalDateTime getCreateDate() {
+        return createDate;
+    }
 
-	public void setCreateDate(LocalDateTime createDate) {
-		this.createDate = createDate;
-	}
+    public void setCreateDate(LocalDateTime createDate) {
+        this.createDate = createDate;
+    }
 
-	public void setLastModifiedDate(LocalDateTime lastModifiedDate) {
-		this.lastModifiedDate = lastModifiedDate;
-	}
+    public LocalDateTime getLastModifiedDate() {
+        return lastModifiedDate;
+    }
+
+    public void setLastModifiedDate(LocalDateTime lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
 }

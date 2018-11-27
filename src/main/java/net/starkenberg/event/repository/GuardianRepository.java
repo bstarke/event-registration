@@ -9,16 +9,15 @@ import java.util.List;
 
 /**
  * @author Brad Starkenberg
- *
  */
-@RepositoryRestResource()
+@RepositoryRestResource
 public interface GuardianRepository extends JpaRepository<Guardian, Long> {
 
-	Guardian findByEmail(@Param("email") String email);
+    Guardian findByEmail(@Param("email") String email);
 
-	List<Guardian> findByLastName(@Param("name") String name);
+    List<Guardian> findByLastName(@Param("name") String name);
 
-	List<Guardian> findByFirstNameAndLastName(@Param("firstName") String firstName,
-			@Param("lastName") String lastName);
+    List<Guardian> findByFirstNameAndLastName(@Param("firstName") String firstName,
+                                              @Param("lastName") String lastName);
 
 }

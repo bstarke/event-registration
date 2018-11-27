@@ -1,5 +1,10 @@
-spring:
-  datasource:
-    username: ${vcap.services.events-db.credentials.username}
-    password: ${vcap.services.events-db.credentials.password}
-    url: ${vcap.services.events-db.credentials.url}
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "health"
+        - "info"
+  endpoint:
+    health:
+      show-details: "never"

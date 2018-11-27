@@ -1,1 +1,0 @@
-cf create-service credhub default events-db -c '{"url": "jdbc:mysql://192.168.8.38:3306/cf_38927c7e_9cb7_492f_9698_5b09a97b350f","username":"theUsername","password":"thePassword"}'

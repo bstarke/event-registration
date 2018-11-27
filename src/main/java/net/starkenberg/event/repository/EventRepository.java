@@ -7,13 +7,12 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**
  * @author Brad Starkenberg
- *
  */
 @RepositoryRestResource
 public interface EventRepository extends JpaRepository<Event, Long> {
 
-	Event findByActive(@Param("active") boolean isActive);
-	
-	Event findByActiveIsTrue();
-	
+    Event findByActive(@Param("active") boolean isActive);
+
+    Event findByActiveIsTrue();
+
 }

@@ -17,7 +17,7 @@ public class TestConfig {
         Jackson2RepositoryPopulatorFactoryBean factory = new Jackson2RepositoryPopulatorFactoryBean();
         // Set a custom ObjectMapper if Jackson customization is needed
         factory.setMapper(objectMapper);
-        factory.setResources(new Resource[] { sourceData });
+        factory.setResources(new Resource[]{sourceData});
         return factory;
     }
 }
